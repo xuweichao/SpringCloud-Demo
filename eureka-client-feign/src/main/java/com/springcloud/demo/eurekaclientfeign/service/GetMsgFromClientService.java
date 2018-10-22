@@ -1,6 +1,7 @@
 package com.springcloud.demo.eurekaclientfeign.service;
 
 import com.springcloud.demo.eurekaclientfeign.conf.FeignConfig;
+import com.springcloud.demo.eurekaclientfeign.conf.MainHystrixError;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @CreateTime: 2018-10-19 17:34
  * @Description: ${Description}
  */
-@FeignClient(value = "eureka-client", configuration = FeignConfig.class)
-public interface GetMsgFromServerService {
+@FeignClient(value = "eureka-client", configuration = FeignConfig.class,fallback = MainHystrixError.class)
+public interface GetMsgFromClientService {
     @GetMapping("main")
     int main();
 }

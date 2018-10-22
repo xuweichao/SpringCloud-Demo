@@ -1,27 +1,26 @@
-package com.springcloud.demo.eurekaclientfeign.conf;
+package com.springcloud.demo.eurekaclientribbon.config;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
-import feign.Retryer;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @BelongsProject: SpringCloud-Demo
- * @BelongsPackage: com.springcloud.demo.eurekaclientfeign.conf
+ * @BelongsPackage: com.springcloud.demo.eurekaclientribbon.config
  * @Author: admin
- * @CreateTime: 2018-10-19 17:36
+ * @CreateTime: 2018-10-22 14:12
  * @Description: ${Description}
  */
 @Configuration
-public class FeignConfig {
+public class RibbonConfig {
     @Bean
-    public Retryer feignRetryer() {
-        return new Retryer.Default(100, SECONDS.toMillis(1), 5);
+    @LoadBalanced
+    RestTemplate restTemplate(){
+        return new RestTemplate();
     }
-
 
     @Bean
     public ServletRegistrationBean getServlet() {

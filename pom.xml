@@ -23,6 +23,7 @@
     </properties>
 
 
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -39,6 +40,8 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>eureka-client-feign</module>
+        <module>eureka-monitor-client</module>
+        <module>eureka-client-ribbon</module>
     </modules>
 
 </project>
