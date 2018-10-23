@@ -42,6 +42,7 @@
         <module>eureka-client-feign</module>
         <module>eureka-monitor-client</module>
         <module>eureka-client-ribbon</module>
+        <module>eureka-client-zuul</module>
     </modules>
 
 </project>
