@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Description: ${Description}
  */
 @FeignClient(value = "eureka-client", configuration = FeignConfig.class,fallback = MainHystrixError.class)
-public interface GetMsgFromClientService {
+public interface FeignService {
     @GetMapping("main")
     int main();
 }

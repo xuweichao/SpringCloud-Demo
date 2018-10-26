@@ -1,6 +1,6 @@
 package com.springcloud.demo.eurekaclientfeign.controller;
 
-import com.springcloud.demo.eurekaclientfeign.service.GetMsgFromClientService;
+import com.springcloud.demo.eurekaclientfeign.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
     @Autowired
-    GetMsgFromClientService getMsgFromClientService;
+    FeignService feignService;
 
     @GetMapping("main")
     public int getMsg() {
-        return getMsgFromClientService.main();
+        return feignService.main();
     }
 }

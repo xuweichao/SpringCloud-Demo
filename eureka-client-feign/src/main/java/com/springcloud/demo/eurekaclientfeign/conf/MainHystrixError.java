@@ -1,6 +1,6 @@
 package com.springcloud.demo.eurekaclientfeign.conf;
 
-import com.springcloud.demo.eurekaclientfeign.service.GetMsgFromClientService;
+import com.springcloud.demo.eurekaclientfeign.service.FeignService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @Description: 熔断器错误回调
  */
 @Component
-public class MainHystrixError implements GetMsgFromClientService {
+public class MainHystrixError implements FeignService {
     @Override
     public int main() {
         return -1;
