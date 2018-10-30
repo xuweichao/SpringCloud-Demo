@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class MainController {
-    @Value("${github.str}")
+    @Value("${application.name}")
     private String name;
 
     @GetMapping("main")

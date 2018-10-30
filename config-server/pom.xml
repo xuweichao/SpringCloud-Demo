@@ -26,7 +26,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--构建高可用的Config Server 将config server 作为eureka client -->
+        <!--构建高可用的Config Server 将config server 作为eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

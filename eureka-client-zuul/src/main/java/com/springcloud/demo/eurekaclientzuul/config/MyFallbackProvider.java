@@ -23,7 +23,7 @@ import java.io.InputStream;
 public class MyFallbackProvider implements FallbackProvider {
     @Override
     public String getRoute() {
-        //所有的路由都加熔断器
+        //所有的路由都加熔断器,如果只对eureka-client 服务生效，此处可替换为“eureka-client”
         return "*";
     }
 
