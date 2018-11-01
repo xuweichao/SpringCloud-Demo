@@ -19,7 +19,7 @@ public class RibbonService {
     RestTemplate restTemplate;
     @HystrixCommand(fallbackMethod = "errorFallbackMsg")
     public int main(){
-        return restTemplate.getForObject("http://eureka-client/main",Integer.class);
+        return restTemplate.getForObject("http://eureka-client-zipkin-service/main",Integer.class);
     }
 
     public int errorFallbackMsg(){

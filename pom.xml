@@ -46,6 +46,9 @@
         <module>config-client</module>
         <module>config-server</module>
         <module>eureka-client-zipkin</module>
+        <module>admin-server</module>
+        <module>admin-client</module>
+        <module>eureka-client-zipkin-service</module>
     </modules>
 
 </project>
