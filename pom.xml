@@ -3,17 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.springcloud.demo</groupId>
-    <artifactId>springcloud-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <groupId>com.springcloud.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,12 +44,16 @@
         <module>eureka-monitor-client</module>
         <module>eureka-client-ribbon</module>
         <module>eureka-client-zuul</module>
+        <module>eureka-client-gateway</module>
         <module>config-client</module>
         <module>config-server</module>
         <module>eureka-client-zipkin</module>
         <module>admin-server</module>
         <module>admin-client</module>
         <module>eureka-client-zipkin-service</module>
+        <module>dubbo-service</module>
+        <module>dubbo-consumer</module>
+        <module>dubbo-provider</module>
     </modules>
 
 </project>
