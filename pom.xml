@@ -54,6 +54,8 @@
         <module>dubbo-service</module>
         <module>dubbo-consumer</module>
         <module>dubbo-provider</module>
+        <module>rocketmq-consumer</module>
+        <module>rocketmq-producer</module>
     </modules>
 
 </project>

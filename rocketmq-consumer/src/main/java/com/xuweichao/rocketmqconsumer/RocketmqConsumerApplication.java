@@ -1,12 +1,13 @@
-package com.xuweichao.dubboconsumer;
+package com.xuweichao.rocketmqconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 @SpringBootApplication
-public class DubboConsumerApplication {
+public class RocketmqConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboConsumerApplication.class, args);
+        SpringApplication.run(RocketmqConsumerApplication.class, args);
     }
 
 }

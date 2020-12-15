@@ -1,4 +1,4 @@
-package com.xuweichao.dubboconsumer.controller;
+package com.xuweichao.dubboprovider.controller;
 
 import com.xuweichao.dubbo.service.DubboService;
 import org.apache.dubbo.config.annotation.Reference;
@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DubboConsumerController {
+public class DubboProducerController {
+
 
     @Reference(version = "1.0.0")
     private DubboService dubboService;
@@ -35,8 +36,6 @@ public class DubboConsumerController {
         dubboService.sel();
         return "sel";
     }
-
-
 
 
 }
